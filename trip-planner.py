@@ -1,12 +1,7 @@
-from flask import Flask
 from flask import Flask, render_template
 from flask import request
-import http.client, urllib.request, urllib.parse, urllib.error, base64
-import json
-
 app = Flask( __name__, instance_relative_config=True )
 from wmata2 import station_info, travel_info, station_dict, money
-
 
 @app.route( "/" )
 def hello():
